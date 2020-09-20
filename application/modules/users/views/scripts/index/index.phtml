@@ -1,0 +1,63 @@
+<section class="row">
+        <ul id="resources">
+            <li class="progression"><?php echo $this->partial('/partials/new-user.phtml',[]) ?></li>    
+        </ul>
+            <?php if(count($this->paginator) > 0): ?>
+                <section class="">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+
+                                    <th>E-mail Address</th>
+                                    <th>Role</th>
+                                </tr>            
+                            </thead>
+                            <tbody>
+                                <?php $count = 1 ; foreach ($this->paginator as $entityOnject): ?>
+
+                                <tr class="resource">
+                                    <td class="heading">
+                                        <h2>
+                                            <span class="text-muted"><?php echo $this->escape($count) ?></span>  : <?php echo $this->escape($entityOnject['firstname']) ?>
+                                        </h2>                    
+                                    </td>
+                                    <td class="heading">
+                                        <h2>
+                                            <?php echo $this->escape($entityOnject['lastname']) ?>
+                                        </h2>                    
+                                    </td>                
+                                    <td><?php echo $this->escape($entityOnject['email']) ?></td>
+                                    <td><?php echo $this->escape($entityOnject['role']) ?></td>
+                                    <td class="options text-right">
+                                        <a href="<?php echo $this->escape($this->url(array('module'=>'users','controller' => 'index', 'action' => 'status' , 'id'=> $this->escape($entityOnject['userId'])), null, true)) ?>" onclick="Docs.expandOperationsForResource('pet'); return false;">
+                                          Status
+                                        </a>                    
+                                        <a href="<?php echo $this->escape($this->url(array('module'=>'users','controller' => 'create', 'action' => 'delete' , 'id'=> $this->escape($entityOnject['userId'])), null, true)) ?>" onclick="Docs.expandOperationsForResource('pet'); return false;">
+                                          Remove
+                                        </a>
+                                        <a href="<?php echo $this->escape($this->url(array('module'=>'users','controller' => 'update', 'action' => 'index' , 'id'=> $this->escape($entityOnject['userId'])), null, true)) ?>">Edit</a>                   
+                                    </td>
+                                </tr>
+
+                        <?php $count++; endforeach; ?>
+                            </tbody>
+                        </table>
+                </section>
+            <?php else: ?>
+                <section class="row">
+                    <div class="col-lg-12">
+                        <p class="text-info info">
+                            There are no users records in the BSSP system at the moment, please use the "create new user" link on the right to create records .
+                        </p>
+                    </div>
+                </section>                            
+            <?php endif; ?>      
+        <ul id="resources">
+            <li class="progression"><?php echo $this->partial('/partials/new-user.phtml',[]) ?></li>    
+        </ul>   
+</section>
+<section>
+    <?php echo $this->paginationControl($this->paginator, 'Elastic', ['partials/pagination.phtml' , 'service']); ?>
+</section>

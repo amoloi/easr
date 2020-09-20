@@ -1,0 +1,71 @@
+<section class="row">                   
+        <ul id="resources">
+            <li class="progression"><?php echo $this->partial('/partials/new-project.phtml',[]) ?></li>
+            <?php if(count($this->paginator) > 0): ?>
+                <?php foreach ($this->paginator as $entityOnject): ?>
+                            <li class="resource" id="resource_pet">
+                                <div class="heading">
+                          <h2>
+                              <a href="#!/pet" onclick="Docs.toggleEndpointListForResource('pet');"><?php echo $this->escape($entityOnject['name']) ?></a>  : <?php echo $this->escape($entityOnject['number']) ?> <span class="<?php echo $this->escape($entityOnject['name']) ?>"> - <?php echo ucfirst($this->escape($entityOnject['status'])) ?></span>
+                          </h2>
+                          <ul class="options">
+                              <?php if( 1 === intval($entityOnject['resolutionStatus'])): ?>
+                                    <li>
+                                        <a class="text-info" href="<?php echo $this->escape($this->url(array('module'=>'projects','controller' => 'commitee-resolutions', 'action' => 'resolution-info' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.collapseOperationsForResource('pet'); return false;">
+                                        Committee Resolution Info
+                                      </a>
+                                    </li>
+                              <?php else:?>                
+                                    <li>
+                                      <a href="<?php echo $this->escape($this->url(array('module'=>'projects','controller' => 'commitee-resolutions', 'action' => 'create' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.collapseOperationsForResource('pet'); return false;">
+                                        Committee Resolution
+                                      </a>
+                                    </li>                
+                              <?php endif;?>
+
+
+                            <li>
+                              <a href="<?php echo $this->escape($this->url(array('module'=>'projects','controller' => 'resolutions', 'action' => 'create' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.collapseOperationsForResource('pet'); return false;">
+                                Consultant(s) Details
+                              </a>
+                            </li>        
+                            <li>
+                              <a href="<?php echo $this->escape($this->url(array('module'=>'projects','controller' => 'payments', 'action' => 'index' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.collapseOperationsForResource('pet'); return false;">
+                                Payment Status
+                              </a>
+                            </li>
+                            <li>
+                              <a href="<?php echo $this->escape($this->url(array('module'=>'projects','controller' => 'resolutions', 'action' => 'create' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.collapseOperationsForResource('pet'); return false;">
+                                Assignment Extension
+                              </a>
+                            </li>        
+                            <li>
+                              <a href="<?php echo $this->escape($this->url(array('module'=>'projects','controller' => 'resolutions', 'action' => 'create' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.collapseOperationsForResource('pet'); return false;">
+                                Implementation Status
+                              </a>
+                            </li>
+                            <li>
+                              <a href="<?php echo $this->escape($this->url(array('module'=>'projects','controller' => 'update', 'action' => 'index' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.collapseOperationsForResource('pet'); return false;">
+                                  <i class="fa fa-pencil"></i> Edit
+                              </a>
+                            </li>         
+                          </ul>
+                        </div>
+
+                        </li>
+                <?php endforeach; ?> 
+            <?php else: ?>
+                <section class="row">
+                    <div class="col-lg-12">
+                        <p class="text-info info">
+                            There are no projects records in the BSSP system at the moment, please use the "create new project" link on the right to create records .
+                        </p>
+                    </div>
+                </section>                            
+            <?php endif; ?>             
+     <li class="progression"><?php echo $this->partial('/partials/new-project.phtml',[]) ?></li>
+        </ul>   
+</section>
+<section>
+    <?php echo $this->paginationControl($this->paginator, 'Elastic', ['partials/pagination.phtml' , 'service']); ?>
+</section>

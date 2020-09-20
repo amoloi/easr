@@ -1,0 +1,57 @@
+<section class="row">
+        <ul id="resources">
+            <li class="progression"><?php echo $this->partial('/partials/new-fund.phtml',[]) ?></li>    
+        </ul>
+    
+            <?php if(count($this->paginator) > 0): ?>
+                <section class="">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Funds Name</th>
+                                    <th>Initial Amount(NAD)</th>
+
+                                    <th>Outstanding Amount(NAD)</th>
+                                    <th>Date of Approval</th>
+                                </tr>            
+                            </thead>
+                            <tbody>
+                                <?php $count = 1 ; foreach ($this->paginator as $entityOnject): ?>
+
+                                <tr class="resource">
+                                    <td class="heading">
+                                        <h2>
+                                            <span class="text-muted"><?php echo $this->escape($count) ?></span>  : <?php echo $this->escape($entityOnject['name']) ?>
+                                        </h2>                    
+                                    </td>
+                                    <td class="text-right">$<?php echo $this->escape($entityOnject['initialAmount']) ?></td>
+                                    <td  class="text-right">$<?php echo $this->escape($entityOnject['outstandingAmount']) ?></td>
+                                    <th class="text-right text-primary"><?php echo $this->escape($entityOnject['dateOfApproval']) ?></th>
+                                    <td class="options text-right">
+                                        <a href="<?php echo $this->escape($this->url(array('module'=>'funds','controller' => 'create', 'action' => 'delete' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>" onclick="Docs.expandOperationsForResource('pet'); return false;">
+                                          Remove
+                                        </a>
+                                        <a href="<?php echo $this->escape($this->url(array('module'=>'funds','controller' => 'update', 'action' => 'index' , 'id'=> $this->escape($entityOnject['id'])), null, true)) ?>">Edit</a>                   
+                                    </td>
+                                </tr>
+
+                        <?php $count++; endforeach; ?>
+                            </tbody>
+                        </table>
+                </section>
+            <?php else: ?>
+                <section class="row">
+                    <div class="col-lg-12">
+                        <p class="text-info info">
+                            There are no funds records in the BSSP system at the moment, please use the "create new funds" link on the right to create records .
+                        </p>
+                    </div>
+                </section>                            
+            <?php endif; ?>    
+        <ul id="resources">
+            <li class="progression"><?php echo $this->partial('/partials/new-fund.phtml',[]) ?></li>    
+        </ul>   
+</section>
+<section>
+    <?php echo $this->paginationControl($this->paginator, 'Elastic', ['partials/pagination.phtml' , 'service']); ?>
+</section>

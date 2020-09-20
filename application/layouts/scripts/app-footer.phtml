@@ -1,0 +1,9 @@
+
+    <section class="breadcrumb">
+            <hgroup>
+                <?php
+                       echo $this->navigation()->breadcrumbs() ->setSeparator("&nbsp; &frasl; &nbsp;")->setLinkLast(false)->setMinDepth(0)->render();
+                ?>
+            </hgroup>        
+    </section>
+

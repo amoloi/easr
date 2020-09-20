@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <nav>
+        <label>Home</label>
+        <controller>index</controller>
+        <action>index</action>
+                <resource>default:index</resource>
+                <privilege>index</privilege>        
+        <pages>
+            <auctionhome>
+                <label>Applications</label>
+                <module>applications</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                            <auctions>
+                                    <label>New Application Form</label>
+                                    <module>applications</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>                                                   
+                            </auctions>
+                            <application-edit>
+                                    <label>Editing Application Data</label>
+                                    <module>applications</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>                                
+                                            <pages>
+                                                <newauction>
+                                                    <label>New Auction</label>
+                                                    <module>auctions</module>
+                                                    <controller>create</controller>
+                                                    <action>index</action>
+                                                        <resource></resource>
+                                                        <privilege></privilege>
+                                                </newauction>
+                                                <editauction>
+                                                    <label>Editing Auction Details</label>
+                                                    <module>auctions</module>
+                                                    <controller>update</controller>
+                                                    <action>index</action>
+                                                        <resource></resource>
+                                                        <privilege></privilege>
+                                                </editauction>                                                                
+                                            </pages>                     
+                            </application-edit>                                                                                             
+                            </pages>                     
+            </auctionhome>            
+            <auctions>
+                <label>Promoters</label>
+                <module>promoters</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Promoter Entry Form</label>
+                                    <module>promoters</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <editauction>
+                                    <label>Editing Promoter Data</label>
+                                    <module>promoters</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editauction>                                                                
+                            </pages>                     
+            </auctions>
+            <auctionbuyers>
+                <label>Consultants</label>
+                <module>consultants</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Consultant Entry Form</label>
+                                    <module>consultants</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <edit-consultant>
+                                    <label>Editing Consultant Data</label>
+                                    <module>consultants</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </edit-consultant>                                                                
+                            </pages>                     
+            </auctionbuyers>                                                                                                                                                                                                                                                                                               
+            <login>
+                <label>Logout</label>
+                <module>default</module>
+                <controller>index</controller>
+                <action>logout</action>
+                    <resource>login:index</resource>
+                    <privilege>index</privilege>                                 
+            </login>                                                      
+        </pages>
+    </nav>
+</configdata>

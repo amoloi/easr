@@ -1,0 +1,48 @@
+<style>
+    a:link,
+    a:visited
+    {
+        color: #0398CA;
+    }
+
+    span#zf-name
+    {
+        color: #91BE3F;
+    }
+
+    div#welcome
+    {
+        color: #FFFFFF;
+        width:  600px;
+        height: 400px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    div#more-information
+    {
+        height: 100%;
+    }
+</style>
+
+<section class="row">
+    <section id="welcome" class="col-lg-12">
+        <div class="row">
+            <section class="col-lg-8"></section>
+            <section class="col-lg-4">
+                <?php
+                    if (!empty($this->message)) {
+                            echo '<font color="red">';
+                            echo $this->escape($this->message[0]);
+                            echo '</font>';
+                    }
+
+                    $this->form->setName('login')
+                               ->setAction('/')
+                               ->setMethod('post'); 
+                    echo $this->form; 
+                    ?>                
+            </section>
+        </div>
+    </section>
+</section>

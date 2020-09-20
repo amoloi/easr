@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <nav>
+        <label>Home</label>
+        <controller>index</controller>
+        <action>index</action>
+                <resource>default:index</resource>
+                <privilege>index</privilege>        
+        <pages>
+            <auctionhome>
+                <label>Applications</label>
+                <module>applications</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                            <auctions>
+                                    <label>New Application Form</label>
+                                    <module>applications</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>                                
+                                            <pages>
+                                                <newauction>
+                                                    <label>New Auction</label>
+                                                    <module>auctions</module>
+                                                    <controller>create</controller>
+                                                    <action>index</action>
+                                                        <resource></resource>
+                                                        <privilege></privilege>
+                                                </newauction>
+                                                <editauction>
+                                                    <label>Editing Auction Details</label>
+                                                    <module>auctions</module>
+                                                    <controller>update</controller>
+                                                    <action>index</action>
+                                                        <resource></resource>
+                                                        <privilege></privilege>
+                                                </editauction>                                                                
+                                            </pages>                     
+                            </auctions>
+                            <application-edit>
+                                    <label>Editing Application Data</label>
+                                    <module>applications</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>                                
+                                            <pages>
+                                                <newauction>
+                                                    <label>New Auction</label>
+                                                    <module>auctions</module>
+                                                    <controller>create</controller>
+                                                    <action>index</action>
+                                                        <resource></resource>
+                                                        <privilege></privilege>
+                                                </newauction>
+                                                <editauction>
+                                                    <label>Editing Auction Details</label>
+                                                    <module>auctions</module>
+                                                    <controller>update</controller>
+                                                    <action>index</action>
+                                                        <resource></resource>
+                                                        <privilege></privilege>
+                                                </editauction>                                                                
+                                            </pages>                     
+                            </application-edit>                                                                                             
+                            </pages>                     
+            </auctionhome>            
+            <auctions>
+                <label>Promoters</label>
+                <module>promoters</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Promoter Entry Form</label>
+                                    <module>promoters</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <editauction>
+                                    <label>Editing Promoter Data</label>
+                                    <module>promoters</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editauction>                                                                
+                            </pages>                     
+            </auctions>
+            <auctionbuyers>
+                <label>Consultants</label>
+                <module>consultants</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Consultant Entry Form</label>
+                                    <module>consultants</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <edit-consultat>
+                                    <label>Editing Consultant Data</label>
+                                    <module>consultants</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </edit-consultat>                                                                
+                            </pages>                     
+            </auctionbuyers>
+            <projects>
+                <label>Projects</label>
+                <module>projects</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Project Resolution Entry Form</label>
+                                    <module>projects</module>
+                                    <controller>commitee-resolutions</controller>
+                                    <action>create</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <newproject>
+                                    <label>New Project Definition Entry Form</label>
+                                    <module>projects</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newproject>
+                                <editproject>
+                                    <label>Editing Project Definition Data</label>
+                                    <module>projects</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editproject>                                                                                                                                  
+                            </pages>                     
+            </projects> 
+            <fundsmanager>
+                <label>Funds</label>
+                <module>funds</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Funds Entry Form</label>
+                                    <module>funds</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <editauction>
+                                    <label>Editing Funds Data</label>
+                                    <module>funds</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editauction>                                                                
+                            </pages>                     
+            </fundsmanager>
+            <budgetmanager>
+                <label>BSSP Budgets</label>
+                <module>budgets</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Budget Entry Form</label>
+                                    <module>budgets</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <editauction>
+                                    <label>Editing Budget Data</label>
+                                    <module>budgets</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editauction>                                                                
+                            </pages>                     
+            </budgetmanager>            
+            <payments>
+                <label>Payments</label>
+                <module>payments</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New Payments Entry Form</label>
+                                    <module>payments</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <editauction>
+                                    <label>Editing Payments Data</label>
+                                    <module>payments</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editauction>                                                                
+                            </pages>                     
+            </payments>
+            <extensions>
+                <label>Assignments Extensions</label>
+                <module>extensions</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>Assignment Extension Entry Form</label>
+                                    <module>extensions</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <editauction>
+                                    <label>Editing Assignment Extension Data</label>
+                                    <module>extensions</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editauction>                                                                
+                            </pages>                     
+            </extensions>
+            <usermanager>
+                <label>Users</label>
+                <module>users</module>
+                <controller>index</controller>
+                <action>index</action>
+                    <resource></resource>
+                    <privilege></privilege>
+                            <pages>
+                                <newauction>
+                                    <label>New User Entry Form</label>
+                                    <module>users</module>
+                                    <controller>create</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </newauction>
+                                <editauction>
+                                    <label>Editing User Data</label>
+                                    <module>budgets</module>
+                                    <controller>update</controller>
+                                    <action>index</action>
+                                        <resource></resource>
+                                        <privilege></privilege>
+                                </editauction>                                                                
+                            </pages>                     
+            </usermanager>                                                                                                                                                                                                                                                                                                                                                                               
+        </pages>
+    </nav>
+</configdata>

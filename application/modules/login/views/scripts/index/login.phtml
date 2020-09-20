@@ -1,0 +1,19 @@
+<section class="row">
+    <section class="col-lg-6">
+        <?php
+            if (!empty($this->message)) {
+                    echo '<font color="red">';
+                    echo $this->escape($this->message[0]);
+                    echo '</font>';
+            }
+
+            $this->form->setName('login')
+                       ->setAction('/login/index/login')
+                       ->setMethod('post'); 
+            echo $this->form; 
+            ?>
+    </section>
+</section>
+
+
+
